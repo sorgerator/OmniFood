@@ -1,6 +1,6 @@
-/******************************/
+/**************************/
 /* HEADER */
-/******************************/
+/**************************/
 
 .header {
   display: flex;
@@ -10,16 +10,16 @@
 
   /* Because we want header to be sticky later */
   height: 9.6rem;
-  padding: 0 4re.8m;
+  padding: 0 4.8rem;
 }
 
 .logo {
   height: 2.2rem;
 }
 
-/******************************/
-/* HERO SECTION */
-/******************************/
+/**************************/
+/* NAVIGATION */
+/**************************/
 
 .main-nav-list {
   list-style: none;
@@ -30,6 +30,7 @@
 
 .main-nav-link:link,
 .main-nav-link:visited {
+  display: inline-block;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -43,7 +44,7 @@
 }
 
 .main-nav-link.nav-cta:link,
-.main-nav-list.nav-cta:visited {
+.main-nav-link.nav-cta:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   color: #fff;
@@ -51,13 +52,13 @@
 }
 
 .main-nav-link.nav-cta:hover,
-.main-nav-list.nav-cta:active {
+.main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
 
-/******************************/
+/**************************/
 /* HERO SECTION */
-/******************************/
+/**************************/
 
 .section-hero {
   background-color: #fdf2e9;
@@ -76,7 +77,7 @@
 
 .hero-description {
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 4.8rem;
 }
 
@@ -117,15 +118,15 @@
   font-weight: 700;
 }
 
-/******************************/
+/**************************/
 /* FEATURED IN SECTION */
-/******************************/
+/**************************/
 
 .section-featured {
-  padding: 4.8rem 0 3.2rem;
+  padding: 4.8rem 0 3.2rem 0;
 }
 
-.heading-featured {
+.heading-featured-in {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.75px;
@@ -146,12 +147,12 @@
   opacity: 50%;
 }
 
-/******************************/
+/**************************/
 /* HOW IT WORKS SECTION */
-/******************************/
+/**************************/
 
 .section-how {
-  padding: 9.6px 0;
+  padding: 9.6rem 0;
 }
 
 .step-number {
@@ -162,7 +163,7 @@
 }
 
 .step-description {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.8;
 }
 
@@ -174,8 +175,8 @@
   justify-content: center;
 }
 
-.step-img-box:before,
-.step-img-box:after {
+.step-img-box::before,
+.step-img-box::after {
   content: "";
   display: block;
   border-radius: 50%;
@@ -185,18 +186,18 @@
   transform: translate(-50%, -50%);
 }
 
-.step-img-box:before {
+.step-img-box::before {
   width: 60%;
   /* height: 60%; */
 
-  /* 60% of the parents height */
+  /* 60% of parent's width */
   padding-bottom: 60%;
 
   background-color: #fdf2e9;
   z-index: -2;
 }
 
-.step-img-box:after {
+.step-img-box::after {
   width: 45%;
   padding-bottom: 45%;
   background-color: #fae5d3;
@@ -208,19 +209,19 @@
   /* z-index: 10; */
 }
 
-/******************************/
+/**************************/
 /* MEALS SECTION */
-/******************************/
+/**************************/
 
 .section-meals {
   padding: 9.6rem 0;
 }
 
 .meal {
-  box-shadow: 0 2.4px 4.8rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
-  /* padding: 4.8rem; */
+  transition: all 0.4s;
 }
 
 .meal:hover {
@@ -251,11 +252,9 @@
 .tag--vegetarian {
   background-color: #51cf66;
 }
-
 .tag--vegan {
   background-color: #94d82d;
 }
-
 .tag--paleo {
   background-color: #ffd43b;
 }
@@ -296,12 +295,12 @@
   font-size: 1.8rem;
 }
 
-/******************************/
-/* TESTEMONIALS SECTION */
-/******************************/
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
 
 .section-testimonials {
-  background-color: #fae5d3;
+  background-color: #fdf2e9;
   display: grid;
   grid-template-columns: 55fr 45fr;
   align-items: center;
@@ -314,7 +313,7 @@
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
+  row-gap: 4.8rem;
   column-gap: 8rem;
 }
 
@@ -356,33 +355,34 @@
   transform: scale(1.1);
 }
 
-/******************************/
-/* PRICING SECTION */
-/******************************/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-pricing {
   padding: 9.6rem 0;
 }
 
-.pricing-plan {
+.princing-plan {
   border-radius: 11px;
+
   width: 75%;
 }
 
-.pricing-plan--starter {
+.princing-plan--starter {
   justify-self: end;
-  border: 2px solid #fae5d3;
+  border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
-.pricing-plan--complete {
+.princing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.pricing-plan--complete::after {
+.princing-plan--complete::after {
   content: "Best value";
   position: absolute;
   top: 6%;
@@ -391,6 +391,7 @@
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
+  color: #333;
   background-color: #ffd43b;
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
@@ -429,7 +430,7 @@
   color: #6f6f6f;
 }
 
-.plan-sign-up {
+.plan-sing-up {
   text-align: center;
   margin-top: 4.8rem;
 }
@@ -462,19 +463,23 @@
   line-height: 1.8;
 }
 
-/******************************/
+/**************************/
 /* CTA SECTION */
-/******************************/
+/**************************/
 
 .section-cta {
-  padding: 9.6rem 0;
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
 }
 
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: #e67e22;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
 
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
@@ -499,8 +504,7 @@
 }
 
 .cta-img-box {
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       to right bottom,
       rgba(235, 151, 78, 0.35),
       rgba(230, 125, 34, 0.35)
@@ -514,7 +518,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
-  row-gap: 2.8rem;
+  row-gap: 2.4rem;
 }
 
 .cta-form label {
@@ -544,4 +548,81 @@
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
